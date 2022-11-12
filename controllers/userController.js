@@ -4,7 +4,6 @@ module.exports = {
     // Get all users
     getAllUsers(req, res) {
         User.find()
-        // .select('-__v')
         .then((users) => res.json(users))
         .catch((err) => {
             console.log(err);
